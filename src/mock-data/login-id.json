@@ -1,0 +1,199 @@
+{
+  "client": {
+    "id": "d2Se60TZpC3Gtz7Dow4Qi0sx33UbplQn",
+    "name": "CDW.CA"
+  },
+  "organization": {
+    "usage": "allow" 
+  },
+  "prompt": {
+    "name": "login-id"
+  },
+  "screen": {
+     "captcha": null,
+    "data": {
+      "passkey": null      
+    },
+    "links": {
+      "reset_password": "https://webdev4vha-proxy.corp.cdw.com/account/logon/forgotpassword?source=/",
+      "signup": "https://webdev4vha-proxy.corp.cdw.com/account/logon/newaccount?target=%2f"
+    },
+    "name": "login-id",
+    "texts": {
+      "pageTitle": "Sign In - Welcome to CDW",
+      "title": "Sign In to Your Account",
+      "description": "Log in to cdw-dev.us.auth0.com",
+      "separatorText": "Or",
+      "buttonText": "Sign In",
+      "footerLinkText": "Create an account",
+      "forgotPasswordText": "Forgot password?",
+      "signupActionLinkText": "Create an account",
+      "footerText": "New customer?",
+      "signupActionText": "Create an account",
+      "passwordPlaceholder": "Password",
+      "usernamePlaceholder": "Username or email address",
+      "emailPlaceholder": "Email address",
+      "phonePlaceholder": "Phone number",
+      "usernameOnlyPlaceholder": "Username",
+      "phoneOrUsernameOrEmailPlaceholder": "Phone or Username or Email",
+      "phoneOrEmailPlaceholder": "Phone number or Email address",
+      "phoneOrUsernamePlaceholder": "Phone Number or Username",
+      "usernameOrEmailPlaceholder": "Username or Email address",
+      "editEmailText": "Edit",
+      "alertListTitle": "Alerts",
+      "devKeysAlertTitle": "Dev Keys",
+      "devKeysAlertMessage": "One or more of your connections are currently using Auth0 development keys and should not be used in production.",
+      "devKeysAlertUrl": "https://auth0.com/docs/connections/social/devkeys",
+      "devKeysAlertLinkText": "Learn More",
+      "logoAltText": "cdw-dev.us.auth0.com",
+      "passkeyButtonText": "Continue with a passkey",
+      "badgeUrl": "https://auth0.com/?utm_source=lock&utm_campaign=badge&utm_medium=widget",
+      "badgeAltText": "Link to the Auth0 website",
+      "error": "Error",
+      "captchaCodePlaceholder": "Enter the code shown above",
+      "qrCode": "QR Code",
+      "spinner_push_notification_label": "Waiting for push notification to be accepted"
+    }
+  },
+  "tenant": {
+    "mfa_options": {
+      "pick_authenticator_enabled": true
+    },
+    "name": "dev-jg46yds2ecm5851u",
+    "enabled_locales": ["en", "fr-CA"]
+  },
+  "transaction": {
+    "country_code": {
+      "code": "IN",
+      "prefix": "91"
+    },
+    "alternate_connections": [     
+    ],
+    "connection": {
+      "name": "Username-Password-Authentication",
+      "strategy": "auth0",
+      "options": {
+        "signup_enabled": true,
+        "forgot_password_enabled": true,
+        "attributes": {
+          "email": {
+            "signup_status": "required",
+            "identifier_active": true
+          },
+          "phone": {
+            "signup_status": "required",
+            "identifier_active": true
+          },
+          "username": {
+            "signup_status": "required",
+            "identifier_active": true,
+            "validation": {
+              "max_length": 15,
+              "min_length": 1,
+              "allowed_types": {
+                "email": false,
+                "phone_number": false
+              }
+            }
+          }
+        },
+        "authentication_methods": {
+          "password": {
+            "enabled": true,
+            "policy": "good",
+            "min_length": 8
+          },
+          "passkey": {
+            "enabled": true
+          }
+        }
+      }
+    },
+    "locale": "en",
+    "state": "mockedStateForPreservedTextsLoginId_cl_mock_preservedTexts_vbn789_andOriginalClientNameAndTenantName_txId_mnb654"
+  },
+  "branding": {
+    "settings": {
+      "colors": {
+        "page_background": "#000000",
+        "primary": "#635dff"
+      }
+    },
+    "themes": {
+      "default": {
+        "borders": {
+          "buttons_style": "rounded",
+          "inputs_style": "rounded",
+          "button_border_weight": 1,
+          "button_border_radius": 3,
+          "input_border_weight": 1,
+          "input_border_radius": 3,
+          "widget_corner_radius": 5,
+          "widget_border_weight": 0,
+          "show_widget_shadow": true
+        },
+        "colors": {
+          "primary_button": "#000000",
+          "primary_button_label": "#ffffff",
+          "secondary_button_border": "#999999",
+          "secondary_button_label": "#cc0000",
+          "base_focus_color": "#cc0000",
+          "base_hover_color": "#a30000",
+          "links_focused_components": "#000000",
+          "header": "#000000",
+          "body_text": "#000000",
+          "widget_background": "#ffffff",
+          "widget_border": "#e0e0e0",
+          "input_labels_placeholders": "#666666",
+          "input_filled_text": "#000000",
+          "input_border": "#cc0000",
+          "input_background": "#ffffff",
+          "icons": "#666666",
+          "error": "#cc0000",
+          "success": "#13a688",
+          "captcha_widget_theme": "dark"
+        },
+      "fonts": {
+        "reference_text_size": 16,
+        "links_style": "normal",
+        "title": {
+          "bold": true,
+          "size": 162.5
+        },
+        "subtitle": {
+          "bold": false,
+          "size": 100
+        },
+        "body_text": {
+          "bold": false,
+          "size": 100
+        },
+        "buttons_text": {
+          "bold": true,
+          "size": 100
+        },
+        "input_labels": {
+          "bold": true,
+          "size": 100
+        },
+        "links": {
+          "bold": true,
+          "size": 87.5
+        }
+      },
+        "page_background": {
+          "page_layout": "center",
+          "background_color": "#bababa"
+        },
+        "widget": {
+          "logo_position": "center",
+          "logo_url": "https://webobjects2.cdw.com/is/image/CDW//rubi-rgb-logo?$%20$&$transparent$",
+          "logo_height": 10,
+          "header_text_alignment": "center",
+          "social_buttons_layout": "bottom"
+        },
+        "displayName": "Unnamed Theme"
+      }
+    }
+  }
+}
