@@ -49,15 +49,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     switch (variant) {
       case "primary":
         variantStyles =
-          "bg-primary text-white hover:bg-primary/90 focus:ring-4 focus:ring-primary/15 disabled:opacity-70 disabled:bg-primary/70 px-4";
+          "login-button bg-primary text-white hover:bg-primary/90 focus:ring-4 focus:ring-primary/15 disabled:opacity-70 disabled:bg-primary/70 px-4";
         break;
       case "secondary":
         variantStyles =
-          "bg-background-widget text-text-default border border-gray-mid hover:bg-gray-100 focus:ring-4 focus:ring-primary/15 disabled:opacity-70";
+          "login-button bg-background-widget text-text-default border border-gray-mid hover:bg-gray-100 focus:ring-4 focus:ring-primary/15 disabled:opacity-70";
         break;
       case "icon":
         variantStyles =
-          "h-full flex items-center justify-center px-3 focus:outline-none hover:text-text-default disabled:opacity-50";
+          "login-button h-full flex items-center justify-center px-3 focus:outline-none hover:text-text-default disabled:opacity-50";
         break;
       default:
         variantStyles = "";

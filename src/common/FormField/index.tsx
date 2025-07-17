@@ -79,13 +79,15 @@ const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
           )}
         >
           <div className="relative w-full">
-            <Input ref={ref} {...enhancedInputProps} />
             <Label
               {...labelProps}
               htmlFor={inputId}
               isError={!!error}
               forceApplyFocusStyle={isParentFocused}
+              floating={false}
+              className='field-label'
             />
+            <Input ref={ref} {...enhancedInputProps} />
             {inputIcon && (
               <div
                 className={cn(

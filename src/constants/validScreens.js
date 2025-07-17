@@ -18,6 +18,7 @@ const VALID_SCREENS = [
   "reset-password-request",
   "reset-password-success",
   "signup",
+  "signup", // ✅ added for CDW POC
   "mfa-begin-enroll-options",
   "mfa-country-codes",
   "mfa-detect-browser-capabilities",

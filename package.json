@@ -11,7 +11,11 @@
     "preview": "vite preview",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,html,css}\" --ignore-unknown",
     "lint:format": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,html,css}\" --ignore-unknown",
-    "validate:mock-file": "node ./scripts/validate-mock-filenames.js"
+    "validate:mock-file": "node ./scripts/validate-mock-filenames.js",
+    "screen:signup:1": "copy /Y .\\src\\mock-data\\signup-state1.json .\\src\\mock-data\\signup.json && npm run screen signup",
+    "screen:signup:2": "copy /Y .\\src\\mock-data\\signup-state2.json .\\src\\mock-data\\signup.json && npm run screen signup",
+    "screen:signup:3": "copy /Y .\\src\\mock-data\\signup-state3.json .\\src\\mock-data\\signup.json && npm run screen signup",
+    "screen:signup:4": "copy /Y .\\src\\mock-data\\signup-state4.json .\\src\\mock-data\\signup.json && npm run screen signup"
   },
   "dependencies": {
     "@auth0/auth0-acul-js": "^0.1.0-beta.5",
@@ -19,6 +23,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.57.0",
+    "react-router-dom": "^7.6.3",
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {

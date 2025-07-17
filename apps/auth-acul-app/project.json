@@ -1,0 +1,132 @@
+{
+  "name": "auth-acul-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/auth-acul-app/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "development",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/auth-acul-app",
+        "index": "apps/auth-acul-app/src/index.html",
+        "baseHref": "/",
+        "main": "apps/auth-acul-app/src/main.tsx",
+        "tsConfig": "apps/auth-acul-app/tsconfig.app.json",
+        "assets": [
+          "apps/auth-acul-app/src/favicon.ico",
+          "apps/auth-acul-app/src/assets"
+        ],
+        "styles": ["apps/auth-acul-app/src/styles.scss"],
+        "webpackConfig": "apps/auth-acul-app/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "optimization": true,
+          "outputHashing": "none",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/auth-acul-app/src/environments/environment.ts",
+              "with": "apps/auth-acul-app/src/environments/environment.development.ts"
+            }
+          ],
+          "outputPath": "dist/apps/auth-acul-app-app-development"
+        },
+        "qa": {
+          "optimization": true,
+          "outputHashing": "none",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/auth-acul-app/src/environments/environment.ts",
+              "with": "apps/auth-acul-app/src/environments/environment.qa.ts"
+            }
+          ],
+          "outputPath": "dist/apps/auth-acul-app-app-qa"
+        },
+        "production": {
+          "optimization": true,
+          "outputHashing": "none",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/auth-acul-app/src/environments/environment.ts",
+              "with": "apps/auth-acul-app/src/environments/environment.production.ts"
+            }
+          ],
+          "outputPath": "dist/apps/auth-acul-app-app-production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "defaultConfiguration": "local",
+      "options": {
+        "buildTarget": "auth-acul-app:build",
+        "hmr": true,
+        "ssl": true,
+        "host": "localhost.cdw.com",
+        "port": 4200
+      },
+      "configurations": {
+        "local": {
+          "buildTarget": "auth-acul-app:build:local",
+          "ssl": true,
+          "host": "localhost.cdw.com",
+          "port": 4200
+        },
+        "development": {
+          "buildTarget": "auth-acul-app:build:development",
+          "ssl": true,
+          "host": "localhost.cdw.com",
+          "port": 4200
+        },
+        "qa": {
+          "buildTarget": "auth-acul-app:build:qa",
+          "ssl": true,
+          "host": "localhost.cdw.com",
+          "port": 4200
+        },
+        "production": {
+          "buildTarget": "auth-acul-app:build:production",
+          "ssl": true,
+          "host": "localhost.cdw.com",
+          "port": 4200
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/auth-acul-app/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/auth-acul-app/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "coverageReporters": ["text"]
+        }
+      }
+    }
+  }
+}

@@ -26,7 +26,9 @@ export const screenToPromptMap = {
   // Signup
   "signup-id": "signup-id",
   "signup-password": "signup-password",
-  signup: "signup",
+  //signup: "signup",
+
+  "signup": "signup", //CUSTOM CDW MAPPING
 
   // Password Reset
   "reset-password": "reset-password",

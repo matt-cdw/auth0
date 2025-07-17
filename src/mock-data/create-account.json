@@ -4,31 +4,31 @@
     "name": "CDW.CA"
   },
   "organization": {
-    "usage": "allow" 
+    "usage": "allow"
   },
   "prompt": {
-    "name": "login-id"
+    "name": "signup"
   },
   "screen": {
-     "captcha": null,
+    "captcha": null,
     "data": {
-      "passkey": null      
+      "passkey": null
     },
     "links": {
       "reset_password": "https://webdev4vha-proxy.corp.cdw.com/account/logon/forgotpassword?source=/",
       "signup": "https://webdev4vha-proxy.corp.cdw.com/account/logon/newaccount?target=%2f"
     },
-    "name": "login-id",
+    "name": "signup",
     "texts": {
-      "pageTitle": "Sign In - Welcome to CDW",
-      "title": "Sign In to Your Account",
-      "description": "Log in to cdw-dev.us.auth0.com",
+      "pageTitle": "Create Account - CDW",
+      "title": "Create Your Account",
+      "description": "Jen Giese invited you to create a CDW Rubi\u2122 account with Adam Plaines Solutions.",
       "separatorText": "Or",
-      "buttonText": "Sign In",
+      "buttonText": "Create Account",
       "footerLinkText": "Create an account",
       "forgotPasswordText": "Forgot password?",
       "signupActionLinkText": "Create an account",
-      "footerText": "",
+      "footerText": "New customer?",
       "signupActionText": "Create an account",
       "passwordPlaceholder": "Password",
       "usernamePlaceholder": "Username or email address",
@@ -60,15 +60,17 @@
       "pick_authenticator_enabled": true
     },
     "name": "dev-jg46yds2ecm5851u",
-    "enabled_locales": ["en", "fr-CA"]
+    "enabled_locales": [
+      "en",
+      "fr-CA"
+    ]
   },
   "transaction": {
     "country_code": {
       "code": "IN",
       "prefix": "91"
     },
-    "alternate_connections": [     
-    ],
+    "alternate_connections": [],
     "connection": {
       "name": "Username-Password-Authentication",
       "strategy": "auth0",
@@ -85,8 +87,8 @@
             "identifier_active": true
           },
           "username": {
-            "signup_status": "required",
-            "identifier_active": true,
+            "signup_status": "hidden",
+            "identifier_active": false,
             "validation": {
               "max_length": 15,
               "min_length": 1,
@@ -153,34 +155,34 @@
           "success": "#13a688",
           "captcha_widget_theme": "dark"
         },
-      "fonts": {
-        "reference_text_size": 16,
-        "links_style": "normal",
-        "title": {
-          "bold": true,
-          "size": 162.5
+        "fonts": {
+          "reference_text_size": 16,
+          "links_style": "normal",
+          "title": {
+            "bold": true,
+            "size": 162.5
+          },
+          "subtitle": {
+            "bold": false,
+            "size": 100
+          },
+          "body_text": {
+            "bold": false,
+            "size": 100
+          },
+          "buttons_text": {
+            "bold": true,
+            "size": 100
+          },
+          "input_labels": {
+            "bold": true,
+            "size": 100
+          },
+          "links": {
+            "bold": true,
+            "size": 87.5
+          }
         },
-        "subtitle": {
-          "bold": false,
-          "size": 100
-        },
-        "body_text": {
-          "bold": false,
-          "size": 100
-        },
-        "buttons_text": {
-          "bold": true,
-          "size": 100
-        },
-        "input_labels": {
-          "bold": true,
-          "size": 100
-        },
-        "links": {
-          "bold": true,
-          "size": 87.5
-        }
-      },
         "page_background": {
           "page_layout": "center",
           "background_color": "#bababa"
